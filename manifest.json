@@ -1,0 +1,23 @@
+{
+  "manifest_version": 1,
+
+  "name": "Miami Herald Jumper",
+  "description": "Removes paywall modal.",
+  "version": "1.0",
+
+  "permissions": [
+    "tabs"
+  ],
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts" : [
+    {
+      "matches" : [
+        "http://*/*"
+      ]
+      "js" : ["contentscript.js"]
+    }
+  ]
+}
