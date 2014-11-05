@@ -1,8 +1,15 @@
 
 (function() {
   setTimeout(function() {
-    document.getElementById('ppUI').remove();
-    document.getElementById('pressplusOverlay').remove();
+    var ppUI = document.getElementById('ppUI');
+    if (ppUI !== null) {
+      ppUI.remove();
+    }
+    var pressplusOverlay = document.getElementById('pressplusOverlay');
+    if (pressplusOverlay !== null) {
+      pressplusOverlay.remove();
+    }
+    
   }, 3000);
 
 })();
